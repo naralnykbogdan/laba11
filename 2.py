@@ -19,23 +19,18 @@ with open("first.txt", 'rb') as f, open("second.txt", 'wb') as g:
         count += 1
 with open("first.txt", 'rb') as f, open("second.txt", 'wb') as g:  
     for item in f:  
-
         s = "Сума чисел:" + str(sum_1) + "\n"            #конвертування цілого числа в строку
         bt = s.encode()  
         g.write(bt)  # записуєм у файл
-
         s = "Сума квадратів чисел:" + str(sum_2) + "\n"  #конвертування цілого числа в строку
         bt = s.encode()  
         g.write(bt)  # записуєм у файл
-
         s = "Добуток чисел:" + str(p_1) + "\n"            #конвертування цілого числа в строку
         bt = s.encode()  
         g.write(bt)  # записуєм у файл
-
         s = "Квадрат добутку чисел:" + str(a) + "\n"      #конвертування цілого числа в строку
         bt = s.encode() 
         g.write(bt)  # записуєм у файл
-
         s = "Останній елемент:" + str(last_element)  
         bt = s.encode()  
         g.write(bt)  # записуєм у файл
