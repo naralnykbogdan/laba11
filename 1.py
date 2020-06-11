@@ -1,19 +1,12 @@
 #Дан текстовий файл f. Видалити з нього останній рядок, результат записати у
 #файл g.
-a = []
-f = open('file.txt', 'r')
-for i in f:  
-    a += i
+f=open('f.txt', 'w')
+f.write("Python\n this\n best\n language\n programming")
 f.close()
-while True:  
-    b = a.pop()
-    if b == '\n':
-        break
-f = open('file.txt', 'w')  
-for k in a:
-    f.write(k)
-f.close()
-g = open('file2.txt', 'w')  
-for j in a:
-    g.write(j)
-g.close()
+with open('f.txt') as f:
+    text = f.read() 
+    items = text.split() 
+with open('g.txt', mode='w') as g:
+    items = items[:-1]  
+    text = '\n'.join(items)
+    g.write(text)  
